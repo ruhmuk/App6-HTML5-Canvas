@@ -44,6 +44,12 @@ function drawRect() {
   var b_context = myRectangle.getContext("2d");
   b_context.fillRect(50, 25, 150, 100);
 }
+
+function writeName() {
+  var myName = document.getElementById("myCanvas");
+  var ctx = myName.getContext("2d");
+  ctx.font = "30px Arial";
+  ctx.fillText("Ruhi Mukherjee", 10, 50); 	
 </script>
 
 
@@ -80,7 +86,8 @@ function drawRect() {
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 	<canvas id="myCanvas" width="300" height="225" style="border:1px solid #000000;"></canvas>
-	<a onclick="drawRect();" class="w3-btn w3-black">Draw a Rectangle!</a>
+	<a onclick="drawRect();" class="w3-btn w3-black">Draw a rectangle!</a>
+	<a onclick="writeName();" class="w3-btn w3-black">Here's my name!</a>
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
