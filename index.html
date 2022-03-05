@@ -33,9 +33,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-<body>
-<img id="disease" src="disease.jpg" alt="The Disease" width="220" height="277">
-</body>
+
 <script>
 	var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
@@ -56,6 +54,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function drawImage(){
   	  var myImage = document.getElementById("myCanvas");
   	  var painting = myImage.getContext("2d");
+	  <img id="disease" src="disease.jpg" alt="The Disease" width="220" height="277">
   	  var img = document.getElementById("disease");
   	  painting.drawImage(img,10,10);
 	}
