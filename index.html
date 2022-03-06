@@ -60,6 +60,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	    context.drawImage(disease, 0, 0, 200, 200);
 	}
 	}
+	function resetCanvas() {
+	  var reset = document.getElementById("myCanvas");
+	  reset.width = reset.width;
+	}
 </script>
 
 
@@ -99,6 +103,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a onclick="drawRect();" class="w3-btn w3-black">Draw a rectangle!</a>
 	<a onclick="writeName();" class="w3-btn w3-black">Here's my name!</a>
 	<a onclick="putImage();" class="w3-btn w3-black">Here's an image!</a>
+	<a onclick="resetCanvas();" class="w3-btn w3-black">Reset!</a>
+
 
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
