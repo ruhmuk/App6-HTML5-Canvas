@@ -41,13 +41,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
 	function drawRect() {  //This function draws a rectangle onto the canvas. It is called with a button in the body section of the code
-  	  var myRectangle = document.getElementById("myCanvas");  //the first line of code is the beginning of every function in the style text; it is a way to notify the computer that the image/shape/text has to be displayed on the canvas
+  	  var myRectangle = document.getElementById("myCanvas");  //this first line of code is the beginning of every function in the style text; it is a way to notify the computer that the image/shape/text has to be displayed on the canvas
   	  var b_context = myRectangle.getContext("2d");
   	  b_context.fillRect(50, 25, 150, 100);  //these numbers place the rectangle as well as size it to specific parameters so it can fit inside the canvas properly
 	}
-		//This function draws a rectangle onto the canvas. It is called with a button in the body section of the code
-		//the first line of code is the beginning of every function in the style text; it is a way to notify the computer that the image/shape/text has to be displayed on the canvas
-		//these numbers place the rectangle as well as size it to specific parameters so it can fit inside the canvas properly
+		
 	function writeName() {
   	  var myName = document.getElementById("myCanvas");
   	  var ctx = myName.getContext("2d");
@@ -57,14 +55,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function putImage() {
 	  var picture = document.getElementById("myCanvas");
   	  var context = picture.getContext("2d");
-  	  var disease = new Image();  <!-- creating a new image and naming it so it can be identified later in the code through a javaScript function-->
-  	  disease.src = "https://www.lerner.ccf.org/lrinews/upload_docs/news_1577719511.jpg";  <!-- this is pairing a link to the image I just named and created in the line of code above.-->
+  	  var disease = new Image();  //creating a new image and naming it so it can be identified later in the code through a javaScript function
+  	  disease.src = "https://www.lerner.ccf.org/lrinews/upload_docs/news_1577719511.jpg";  //this is pairing a link to the image I just named and created in the line of code above
   	  disease.onload = function() {
-    	    context.drawImage(disease, 0, 0, 200, 200);  <!-- these numbers place the image as well as size it to specific parameters so it can fit inside the canvas properly-->
+    	    context.drawImage(disease, 0, 0, 200, 200);  //these numbers place the image as well as size it to specific parameters so it can fit inside the canvas properly
 	}
 	}
 	function resetCanvas() {
-	  var reset = document.getElementById("myCanvas");  <!-- this function clears all the elements off the canvas by simply resetting its width-->
+	  var reset = document.getElementById("myCanvas");  //this function clears all the elements off the canvas by simply resetting its width
 	  reset.width = reset.width;
 	}
 </script>
