@@ -17,10 +17,11 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of this code is to create a canvas on the home page of our app, and with different buttons, display various things on the canvas. This is a good foundation for when we create diagnostic apps that display, intake and evaluate pictures.
  
 Known Issues:
-blah, blah, blah, blah
+I am not sure how exactly to put the buttons directly below the canvas, as right now they are moreso next to the canvas. Furthermore, the buttons all layer the various images/shapes/text on top of one another, and I am not sure if I am supposed to clear the canvas before each element is displayed.
+However, the user can press reset before displaying the other elements on the canvas.
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -39,29 +40,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-	function drawRect() {
-  	  var myRectangle = document.getElementById("myCanvas");
+	function drawRect() { <!--This function draws a rectangle onto the canvas. It is called with a button in the body section of the code-->
+  	  var myRectangle = document.getElementById("myCanvas");<!-- this line of code is the beginning of every function in the style text; it is a way to notify the computer that the image has to be displayed on the canvas.-->
   	  var b_context = myRectangle.getContext("2d");
-  	  b_context.fillRect(50, 25, 150, 100);
+  	  b_context.fillRect(50, 25, 150, 100);<!-- these numbers place the rectangle as well as size it to specific parameters so it can fit inside the canvas properly-->
 	}
 
 	function writeName() {
   	  var myName = document.getElementById("myCanvas");
   	  var ctx = myName.getContext("2d");
   	  ctx.font = "30px Arial";
-  	  ctx.fillText("Ruhi Mukherjee", 10, 50);
+  	  ctx.fillText("Ruhi Mukherjee", 10, 50);<!-- these numbers place the text as well as size it to specific parameters so it can fit inside the canvas properly-->
 	}
 	function putImage() {
 	  var picture = document.getElementById("myCanvas");
   	  var context = picture.getContext("2d");
-  	  var disease = new Image();
-  	  disease.src = "https://www.lerner.ccf.org/lrinews/upload_docs/news_1577719511.jpg";
+  	  var disease = new Image();<!-- creating a new image and naming it so it can be identified later in the code through a javaScript function-->
+  	  disease.src = "https://www.lerner.ccf.org/lrinews/upload_docs/news_1577719511.jpg";<!-- this is pairing a link to the image I just named and created in the line of code above.-->
   	  disease.onload = function() {
-    	    context.drawImage(disease, 0, 0, 200, 200);
+    	    context.drawImage(disease, 0, 0, 200, 200);<!-- these numbers place the image as well as size it to specific parameters so it can fit inside the canvas properly-->
 	}
 	}
 	function resetCanvas() {
-	  var reset = document.getElementById("myCanvas");
+	  var reset = document.getElementById("myCanvas");<!-- this function clears all the elements off the canvas by simply resetting its width-->
 	  reset.width = reset.width;
 	}
 </script>
@@ -99,11 +100,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-	<canvas id="myCanvas" width="300" height="225" style="border:1px solid #000000;"></canvas>
-	<a onclick="drawRect();" class="w3-btn w3-black">Draw a rectangle!</a>
-	<a onclick="writeName();" class="w3-btn w3-black">Here's my name!</a>
-	<a onclick="putImage();" class="w3-btn w3-black">Here's an image!</a>
-	<a onclick="resetCanvas();" class="w3-btn w3-black">Reset!</a>
+	<canvas id="myCanvas" width="300" height="225" style="border:1px solid #000000;"></canvas> <!-- this sets up the canvas, as well as determines its size and gives it a border. All the various elements will be displayed on this.-->
+	<a onclick="drawRect();" class="w3-btn w3-black">Draw a rectangle!</a> <!-- This button calls the function that displays a rectangle on the canvas.-->
+	<a onclick="writeName();" class="w3-btn w3-black">Here's my name!</a> <!-- This button calls the function that displays my name on the canvas.-->
+	<a onclick="putImage();" class="w3-btn w3-black">Here's an image!</a> <!-- This button calls the function that displays an image on the canvas.-->
+	<a onclick="resetCanvas();" class="w3-btn w3-black">Reset!</a> <!-- This button calls the function that resets/clears the canvas.-->
 
 
 
