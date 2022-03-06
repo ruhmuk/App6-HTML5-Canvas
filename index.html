@@ -51,6 +51,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   	  ctx.font = "30px Arial";
   	  ctx.fillText("Ruhi Mukherjee", 10, 50);
 	}
+	var picture = document.getElementById("myCanvas");
+  	var context = picture.getContext("2d");
+  	var disease = new Image();
+  	disease.src = "disease.jpg";
+  	function drawImage() {
+    	  context.drawImage(disease, 0, 0);
+	}
 </script>
 
 
