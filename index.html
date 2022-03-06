@@ -40,10 +40,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 	console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 
-	function drawRect() {  
-  	  var myRectangle = document.getElementById("myCanvas");  
+	function drawRect() {  //This function draws a rectangle onto the canvas. It is called with a button in the body section of the code
+  	  var myRectangle = document.getElementById("myCanvas");  //the first line of code is the beginning of every function in the style text; it is a way to notify the computer that the image/shape/text has to be displayed on the canvas
   	  var b_context = myRectangle.getContext("2d");
-  	  b_context.fillRect(50, 25, 150, 100);  
+  	  b_context.fillRect(50, 25, 150, 100);  //these numbers place the rectangle as well as size it to specific parameters so it can fit inside the canvas properly
 	}
 		//This function draws a rectangle onto the canvas. It is called with a button in the body section of the code
 		//the first line of code is the beginning of every function in the style text; it is a way to notify the computer that the image/shape/text has to be displayed on the canvas
